@@ -1,0 +1,39 @@
+.mainpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Pokemon Solid', sans-serif;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.headline {
+    font-size: 140px;
+    margin-bottom: 30px;
+}
+
+.subheader {
+    font-size: 75px;
+}
+
+.battlebanner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.player {
+     height: 400px;
+     width: 400px;
+}
+
+.startbutton {
+    width: 200px;
+    height: 75px;
+    background-color: yellow;
+    border-radius: 15px;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 34px;
+}
