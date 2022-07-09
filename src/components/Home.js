@@ -1,6 +1,21 @@
 import './Home.css';
+import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+
+import usePokemonsList from '../services/usePokemonsList';
+
+
 
 const Home = () => {
+
+const { pokeId } = useParams();
+
+const pokemonsList=usePokemonsList(pokeId)  
+console.log(pokemonsList);
+
+
+
+
     return ( 
       <div className="mainpage">
         <span className="headline">POKEBATTLE!</span>
