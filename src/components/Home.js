@@ -1,15 +1,15 @@
-
+import './Home.css';
 
 const Home = () => {
     return ( 
-      <div>
-        <div><h1>POKEBATTLE!</h1></div>
+      <div className="mainpage">
+        <span className="headline">POKEBATTLE!</span>
+        <button className="startbutton">FIGHT!</button>
         <div className="battlebanner">
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/25.png" alt="shekachu"/>
-          <h1>vs</h1>
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png" alt="venusaur"/>
+          <img className="player" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/25.png" alt="shekachu"/>
+          <div className="subheader">vs</div>
+          <img className="player" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png" alt="venusaur"/>
         </div>
-        <button>PLAY NOW</button>
       </div>
     )
 };
