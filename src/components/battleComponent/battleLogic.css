@@ -1,0 +1,80 @@
+.flipCoins {
+    margin-top: 50px;
+    margin-right: 0;
+    margin-left: 0;
+    left: 0;
+    right: 0;
+}
+
+.winner {
+    margin: 0;
+    text-align: center;
+    font-size: 45px;
+
+    animation-name: winner;
+    animation-fill-mode: backwards;
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -ms-animation-delay: 5s;
+    -o-animation-delay: 5s;
+    animation-delay: 5s;
+    animation-duration: 5s;
+}
+
+
+
+.winner h1,
+h2 {
+    margin: 0;
+}
+
+.button button {
+    animation-name: winner;
+    animation-fill-mode: backwards;
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    -ms-animation-delay: 7s;
+    -o-animation-delay: 7s;
+    animation-delay:7s;
+    animation-duration: 7s;
+
+
+    font-size: 30px;
+    
+    height: 100px;
+    width: 250px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom:100px;
+    border-radius: 20px;
+
+    
+    border: 1px solid rgb(8, 8, 8);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0 8px 15px rgb(203, 203, 10);
+    -webkit-box-shadow: 0 8px 15px rgb(203, 203, 10);
+    -o-box-shadow: 0 8px 15px rgb(203, 203, 10);
+    -ms-box-shadow: 0 8px 15px rgb(203, 203, 10);
+    box-shadow: 0 8px 15px rgb(203, 203, 10);
+
+}
+
+@keyframes winner {
+    from {
+        color: rgb(61, 58, 58);
+        opacity: 0.0;
+    }
+
+    to {
+        color: rgb(61, 58, 58);
+        opacity: 1.0;
+    }
+}

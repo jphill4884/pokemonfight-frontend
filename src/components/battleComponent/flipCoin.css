@@ -1,0 +1,104 @@
+.flipCoins {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flipCoins h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: 200;
+  font-size: 35px;
+
+}
+
+.winnerName {
+  animation-name: example;
+  animation-fill-mode: backwards;   
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
+  animation-duration: 3s; 
+}
+
+
+@keyframes example {
+  from {
+    color: rgb(61, 58, 58);
+    opacity: 0.0;
+  }
+
+  to {
+    color: rgb(61, 58, 58);
+    opacity: 1.0;
+  }
+}
+
+#coin {
+  margin-top: 100px;
+  margin: 10px 100px;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  transition: transform 2s ease-in;
+  transform-style: preserve-3d;
+}
+
+.side {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  display: flex;
+  background-color: yellow;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+
+.head h2 img,
+.side h2 img {
+  height: 250px;
+  text-align: center;
+}
+
+.tail {
+  background-color: red;
+  transform: rotateY(-180deg);
+}
+
+.flipHead {
+  animation: resultHead 4s ease-out forwards;
+}
+
+.flipTail {
+  animation: resultTail 4s ease-out forwards;
+}
+
+@keyframes resultHead {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(1800deg);
+  }
+}
+
+@keyframes resultTail {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(1980deg);
+  }
+}
