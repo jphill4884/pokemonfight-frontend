@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const PokemonCard = ({pokemon}) => {
   
-/* console.log(pokemon) */
+  console.log(pokemon)
 
 
   let opponent = Math.floor(Math.random() * 700) + 1;
@@ -22,11 +22,12 @@ const PokemonCard = ({pokemon}) => {
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
           alt="bulbasaur"
         />
+        <h2>{pokemon.name.english}</h2>
         <ul>
-          <li>Hit Points: {pokemon.base[0]}</li>
-          <li>Attack Power: {pokemon.base[1]}</li>
-          <li>Defense Power: {pokemon.base[2]}</li>
-          <li>Speed: {pokemon.base[5]}</li>
+          <li>Hit Points: {pokemon.base.HP}</li>
+          <li>Attack Power: {pokemon.base.Attack}</li>
+          <li>Defense Power: {pokemon.base.Defense}</li>
+          <li>Speed: {pokemon.base.Speed}</li>
         </ul>
       </div>
     </Link>
