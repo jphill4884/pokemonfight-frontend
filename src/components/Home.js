@@ -18,8 +18,8 @@ const selectPlayer = () =>{
   navigate('/pokemon/list');
 }
 
-    return ( 
-      <div className="mainpage">
+    return (      
+      <div className="mainpage ">
         <span className="headline">POKEBATTLE!</span>
         <button className="startbutton" onClick={selectPlayer}>FIGHT!</button>
         <div className="battlebanner">
@@ -27,7 +27,7 @@ const selectPlayer = () =>{
           <div className="subheader">vs</div>
           <img className="player" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png" alt="venusaur"/>
         </div>
-      </div>
+      </div>   
     )
 };
 

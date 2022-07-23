@@ -1,0 +1,17 @@
+.battle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+   
+    font-family: 'Pokemon Solid', sans-serif;
+    margin: 100px;
+    left: 0;
+    right: 0;
+}
+
+.battle .coins{
+    display: inline-flexbox;
+}

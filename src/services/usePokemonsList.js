@@ -4,7 +4,7 @@ import serverUrl from "../serverUrl";
 const usePokemonsList = (pokeId) => {
   const [pokemons, setPokemons] = useState();
 
-  console.log(`${serverUrl}`);
+/*   console.log(`${serverUrl}`); */
 
   useEffect(() => {
     if (pokeId === undefined) {
@@ -12,7 +12,7 @@ const usePokemonsList = (pokeId) => {
         fetch(`${serverUrl}/pokemon`)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+         /*  console.log(data); */
           setPokemons(data);
         })
         .catch((e) => console.log(e.message));
@@ -22,7 +22,7 @@ const usePokemonsList = (pokeId) => {
     fetch(`${serverUrl}/pokemon/${pokeId}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        /* console.log(data); */
         setPokemons(data);
       })
       .catch((e) => console.log(e.message));
