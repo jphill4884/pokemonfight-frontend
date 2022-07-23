@@ -1,25 +1,30 @@
 import { Link } from "react-router-dom";
 import "./pokemonList.css";
-import usePokemonsList from '../services/usePokemonsList';
-import { useParams } from "react-router-dom";
+
+import usePokemonImag from '../services/usePokemonImage';
+
 
 const PokemonCard = ({pokemon}) => {
   
-  console.log(pokemon)
+ /*  console.log(pokemon.name.english) */
 
 
   let opponent = Math.floor(Math.random() * 700) + 1;
   if (opponent === pokemon.id) {
     opponent+=1;
   };
+
+const imagePokemon= usePokemonImag(pokemon.name.english);
  /*  console.log(opponent); */
+
+
 
   return (
 
   <Link to={`/battle/${pokemon.id}/${opponent}`}>
       <div className="pokeCard">
         <img className="pokeImage"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+          src={imagePokemon}
           alt="bulbasaur"
         />
         <div className="cardPoke">
