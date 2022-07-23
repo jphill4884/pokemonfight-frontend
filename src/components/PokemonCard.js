@@ -18,17 +18,19 @@ const PokemonCard = ({pokemon}) => {
 
   <Link to={`/battle/${pokemon.id}/${opponent}`}>
       <div className="pokeCard">
-        <img
+        <img className="pokeImage"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
           alt="bulbasaur"
         />
-        <h2>{pokemon.name.english}</h2>
+        <div className="cardPoke">
+        <h2 className="title">{pokemon.name.english}</h2>
         <ul>
-          <li>Hit Points: {pokemon.base.HP}</li>
-          <li>Attack Power: {pokemon.base.Attack}</li>
-          <li>Defense Power: {pokemon.base.Defense}</li>
-          <li>Speed: {pokemon.base.Speed}</li>
+          <li class="disabled">Hit Points: {pokemon.base.HP}</li>
+          <li class="disabled">Attack Power: {pokemon.base.Attack}</li>
+          <li class="disabled">Defense Power: {pokemon.base.Defense}</li>
+          <li class="disabled">Speed: {pokemon.base.Speed}</li>
         </ul>
+        </div>
       </div>
     </Link>
   );
