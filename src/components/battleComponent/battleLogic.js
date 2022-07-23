@@ -6,20 +6,26 @@ import FlipCoin from "./flipCoin";
 import "./battleLogic.css";
 import { useNavigate } from "react-router-dom";
 import serverUrl from "../../serverUrl";
+import usePokemonImage from '../../services/usePokemonImage';
 
-/* import useRankingList from "../../services/useRankingList"; */
+
 
 const BattleLogic = ({ pokeHome, pokeAway }) => {
   const navigate = useNavigate();
 
   const [winner, setWinner] = useState();
   const [loser, setLoser] = useState();
- /*  const [round, setRound] = useState(0); */
+
+  const imagePokeH= usePokemonImage(pokeHome);
+  const imagePokeA= usePokemonImage(pokeAway);
+ /*  console.log(imagePokeA); */
+ 
+ 
  let round=0;
  let win=0;
   const displayWinner = (winnerRound) => {
    /*  console.log(winnerRound); */
-   
+
    
     if (winnerRound) {
       win = win + winnerRound;
@@ -27,8 +33,8 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
      
   /*     setRound(finalRounds); */
     }
-     console.log(round);
-    console.log(win);
+ /*     console.log(round);
+    console.log(win); */
     if (round === 3) {
       if (win > 0) {setWinner(pokeHome);
         setLoser(pokeAway);
@@ -37,7 +43,7 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
         setLoser(pokeHome);}
     }
   };
-  console.log(winner);
+  /* console.log(winner); */
   /* const rankingItem = useRankingList("win",winner) */
 
   const updateRanking = (winLose, pokeName) => {
@@ -47,6 +53,7 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
        /*  console.log(data); */
       })
       .catch((e) => console.log(e.message));
+      
   };
 
   const gotoTupdatedRanking = () => {
@@ -61,7 +68,7 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
     timer();
     clearTimeout(timer)
   };
-
+ 
 
   return (
     <div className="container">
@@ -72,6 +79,8 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
             winner={displayWinner}
             pokeH={pokeHome}
             pokeA={pokeAway}
+            imageH={imagePokeH}
+            imageA={imagePokeA}
           />
         }
         {
@@ -80,6 +89,8 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
             winner={displayWinner}
             pokeH={pokeHome}
             pokeA={pokeAway}
+            imageH={imagePokeH}
+            imageA={imagePokeA}
           />
         }
         {
@@ -88,6 +99,8 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
             winner={displayWinner}
             pokeH={pokeHome}
             pokeA={pokeAway}
+            imageH={imagePokeH}
+            imageA={imagePokeA}
           />
         }
       </div>

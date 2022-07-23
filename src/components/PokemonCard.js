@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./pokemonList.css";
 
-import usePokemonImag from '../services/usePokemonImage';
+import usePokemonImage from '../services/usePokemonImage';
 
 
 const PokemonCard = ({pokemon}) => {
@@ -14,7 +14,7 @@ const PokemonCard = ({pokemon}) => {
     opponent+=1;
   };
 
-const imagePokemon= usePokemonImag(pokemon.name.english);
+const imagePokemon= usePokemonImage(pokemon.name.english);
  /*  console.log(opponent); */
 
 

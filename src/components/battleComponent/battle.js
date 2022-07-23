@@ -13,8 +13,8 @@ const { homeId, awayId } = useParams();
 
 const pokemonHome=usePokemonsList(homeId);
 const pokemonAway=usePokemonsList(awayId);    
-/* console.log( pokemonHome);
-console.log( pokemonAway); */
+/* console.log( pokemonHome);*/
+/* console.log( pokemonAway);  */
 
 
 if(!pokemonHome||!pokemonAway) return;

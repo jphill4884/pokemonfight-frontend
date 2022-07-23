@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./flipCoin.css";
 
-const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
+const FlipCoin = ({ time, winner, pokeH, pokeA, imageH, imageA }) => {
  /*    console.log(pokeH); */
   const [winnerCoin, setWinnerCoin] = useState();
   const [displayWinner, setDisplayWinner] = useState();
@@ -9,12 +9,12 @@ const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
   const coinToss = () => {
     if (Math.random() < 0.5) {
       setWinnerCoin("flipHead");
-      /* console.log("heads"); */
+     
       setDisplayWinner(pokeH);
       winner(1);
     } else {
       setWinnerCoin("flipTail");
-      /* console.log("tails"); */
+     
       winner(-1);
       setDisplayWinner(pokeA);
     }
@@ -39,7 +39,7 @@ const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
         <div className="side head">
           <h2>
             <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/25.png"
+              src={imageH}
               alt="shekachu"
             />
           </h2>
@@ -47,7 +47,7 @@ const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
         <div className="side tail">
           <h2>
             <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/3.png"
+              src={imageA}
               alt="shekachu2"
             />
           </h2>
