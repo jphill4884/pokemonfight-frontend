@@ -1,0 +1,19 @@
+.pokeList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+
+.pokeCard {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.pokeCard img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,10 +1,18 @@
-import PokemonCard from './components/PokemonCard';
-import PokemonData from '../Data.json';
+import PokemonCard from './PokemonCard';
+import Pokemons from '../Data.json';
+import './pokemonList.css';
 
 const PokemonList = () => {
-    PokemonData.map((pokemon) => (
-      <PokemonCard key={pokemon.id} props={pokemon} />
-    ))
+  console.log(Pokemons);
+
+  return(
+    <div className="pokeList">
+    {Pokemons &&
+      Pokemons.map((onePokemon, index) => (
+      <PokemonCard key={index} props={onePokemon} />
+    ))}
+    </div>
+  )
 }
 
 export default PokemonList;
