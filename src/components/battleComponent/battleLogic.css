@@ -10,7 +10,6 @@
     margin: 0;
     text-align: center;
     font-size: 45px;
-
     animation-name: winner;
     animation-fill-mode: backwards;
     -webkit-animation-delay: 5s;
@@ -39,11 +38,9 @@ h2 {
     animation-duration: 7s;
 
 
-    font-size: 30px;
-    
+    font-size: 30px;    
     height: 100px;
-    width: 250px;
-    
+    width: 250px;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,4 +74,9 @@ h2 {
         color: rgb(61, 58, 58);
         opacity: 1.0;
     }
+}
+
+.button{
+    margin:55px;
+    font-family: 'Arial', Courier, monospace;
 }

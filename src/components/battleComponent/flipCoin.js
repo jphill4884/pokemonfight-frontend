@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./flipCoin.css";
 
 const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
-    console.log(pokeH);
+ /*    console.log(pokeH); */
   const [winnerCoin, setWinnerCoin] = useState();
   const [displayWinner, setDisplayWinner] = useState();
 
@@ -21,7 +21,7 @@ const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
   };
 
   if (winnerCoin) {
-    console.log(winnerCoin);
+    /* console.log(winnerCoin); */
   }
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const FlipCoin = ({ time, winner, pokeH, pokeA }) => {
 
   if (!winnerCoin) return;
 
-  console.log(displayWinner);
+ /*  console.log(displayWinner); */
   return (
     
     <div className="flipCoin">
