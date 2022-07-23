@@ -11,8 +11,15 @@ const PokemonCard = () => {
   const selectedPoke=usePokemonsList(pokeId);
   if(!selectedPoke) return;
 
+  let opponent = Math.floor(Math.random() * 700) + 1;
+  if (opponent === props.id) {
+    opponent++;
+  };
+  console.log(opponent);
+
   return (
-    <Link to={`/pokemon/`}>
+
+<Link to={`/pokemon/battle/${props.id}/${opponent}`}>
       <div className="pokeCard">
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
@@ -28,5 +35,6 @@ const PokemonCard = () => {
     </Link>
   );
 };
+
 
 export default PokemonCard;

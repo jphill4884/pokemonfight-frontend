@@ -20,8 +20,13 @@ function App() {
         {/* <Route path="/list" /> */}
         <Route path="/:pokeId" />
         <Route path="/battle/:homeId/:awayId" element={<Battle />}/>
+
         {/* <Route path="/winner/:pokeId" /> */}
         <Route path="/ranking/w&l/:winner/:loser" element={<RankingTable/>}/>      
+
+        <Route path="/ranking" element={<RankingTable/>}/>
+  
+
       </Routes>
     </div>
   );
