@@ -1,9 +1,3 @@
-
-
-
-
-
-
 html,body {
   height: 100%;
   width: 100%;
@@ -12,11 +6,10 @@ html,body {
   background-image: url("./images/wallpaper.png");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  
-  
 }
 
+.gameBoard {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
