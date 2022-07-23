@@ -13,12 +13,13 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
   const navigate = useNavigate();
 
   const [winner, setWinner] = useState();
+  const [loser, setLoser] = useState();
  /*  const [round, setRound] = useState(0); */
  let round=0;
-
+ let win=0;
   const displayWinner = (winnerRound) => {
    /*  console.log(winnerRound); */
-    let win = 0;
+   
    
     if (winnerRound) {
       win = win + winnerRound;
@@ -26,11 +27,14 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
      
   /*     setRound(finalRounds); */
     }
-/*     console.log(round);
-    console.log(win); */
+     console.log(round);
+    console.log(win);
     if (round === 3) {
-      if (win > 0) setWinner(pokeHome);
-      else setWinner(pokeAway);
+      if (win > 0) {setWinner(pokeHome);
+        setLoser(pokeAway);
+      }
+      else {setWinner(pokeAway);
+        setLoser(pokeHome);}
     }
   };
   console.log(winner);
@@ -40,21 +44,24 @@ const BattleLogic = ({ pokeHome, pokeAway }) => {
     fetch(`${serverUrl}/ranking/${winLose}/${pokeName}`, {method: 'PUT'})
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+       /*  console.log(data); */
       })
       .catch((e) => console.log(e.message));
   };
 
   const gotoTupdatedRanking = () => {
-/*     if (winner === pokeHome) {
+    if (winner === pokeHome) {
       updateRanking("win", pokeHome);
       updateRanking("lose", pokeAway);
     } else {
       updateRanking("lose", pokeHome);
       updateRanking("win", pokeAway);
-    } */
-    navigate("/ranking");
+    }
+    const timer=()=>setTimeout(() =>navigate("/ranking/w&l/"+winner+"/"+loser) ,  2000);
+    timer();
+    clearTimeout(timer)
   };
+
 
   return (
     <div className="container">

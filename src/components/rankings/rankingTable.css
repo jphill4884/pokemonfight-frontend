@@ -11,3 +11,17 @@ h1 {
     font-size: 50px;
 
 }
+
+.board{
+    margin:auto;
+    text-align: center;
+    width: 80%;
+}
+
+.winnerRanking{
+    background-color: green;
+}
+
+ .loserRanking{
+    background-color: red;
+}
