@@ -15,10 +15,11 @@ function App() {
       <Routes>
 
       <Route path="/" element={<Home />} />
-        <Route path="/pokemon/:pokeId" element={<PokemonCard />} />
-        <Route path="/pokemon/list" element={<PokemonList />} />
+      <Route path="/pokemon/" element={<PokemonList />} />
+        <Route path="/:pokeId" element={<PokemonCard />} />
+      
         {/* <Route path="/list" /> */}
-        <Route path="/:pokeId" />
+        
         <Route path="/battle/:homeId/:awayId" element={<Battle />}/>
 
         {/* <Route path="/winner/:pokeId" /> */}

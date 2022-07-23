@@ -15,7 +15,7 @@ console.log(pokemonsList);
 
 const navigate = useNavigate();
 const selectPlayer = () =>{ 
-  navigate('/pokemon/list');
+  navigate('/pokemon');
 }
 
     return (      

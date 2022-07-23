@@ -3,33 +3,30 @@ import "./pokemonList.css";
 import usePokemonsList from '../services/usePokemonsList';
 import { useParams } from "react-router-dom";
 
-const PokemonCard = () => {
+const PokemonCard = ({pokemon}) => {
   
+/* console.log(pokemon) */
 
-  const { pokeId  } = useParams();
-
-  const selectedPoke=usePokemonsList(pokeId);
-  if(!selectedPoke) return;
 
   let opponent = Math.floor(Math.random() * 700) + 1;
-  if (opponent === props.id) {
-    opponent++;
+  if (opponent === pokemon.id) {
+    opponent+=1;
   };
-  console.log(opponent);
+ /*  console.log(opponent); */
 
   return (
 
-<Link to={`/pokemon/battle/${props.id}/${opponent}`}>
+  <Link to={`/battle/${pokemon.id}/${opponent}`}>
       <div className="pokeCard">
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
           alt="bulbasaur"
         />
         <ul>
-          <li>Hit Points: {selectedPoke.base[0]}</li>
-          <li>Attack Power: {selectedPoke.base[1]}</li>
-          <li>Defense Power: {selectedPoke.base[2]}</li>
-          <li>Speed: {selectedPoke.base[5]}</li>
+          <li>Hit Points: {pokemon.base[0]}</li>
+          <li>Attack Power: {pokemon.base[1]}</li>
+          <li>Defense Power: {pokemon.base[2]}</li>
+          <li>Speed: {pokemon.base[5]}</li>
         </ul>
       </div>
     </Link>
