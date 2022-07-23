@@ -10,7 +10,7 @@ if (NODE_ENV === "production") {
  url = REACT_APP_DEVELOPMENT_URL;
 }
 
-console.log(process.env);
+/* console.log(process.env); */
 console.log(
  `This React app is running in ${NODE_ENV} mode. The server URL used is: ${url}`
 );
