@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 
 
 const usePokemonImage = (originalName) => {
+
   /* console.log(originalName); */
+
 
   const [pokemon, setPokemon] = useState();
 
@@ -14,6 +16,7 @@ const usePokemonImage = (originalName) => {
         .then((res) => res.json())
         .then((data) => {
             setPokemon(data);
+
           /*   console.log(data); */
         })
         .catch((e) => console.log(e.message));
@@ -23,3 +26,4 @@ const usePokemonImage = (originalName) => {
 };
 
 export default usePokemonImage;
+
