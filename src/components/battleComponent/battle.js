@@ -17,7 +17,7 @@ const pokemonAway=usePokemonsList(awayId);
 console.log( pokemonAway); */
 
 
-if(!pokemonHome) return;
+if(!pokemonHome||!pokemonAway) return;
 
     return ( 
       <div className="battle">
