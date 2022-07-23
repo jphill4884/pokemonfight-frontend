@@ -4,8 +4,14 @@ import './pokemonList.css';
 const PokemonCard = ({ props }) => {
   console.log(props);
 
+  let opponent = Math.floor(Math.random() * 700) + 1;
+  if (opponent === props.id) {
+    opponent++;
+  };
+  console.log(opponent);
+
   return (
-    <Link to={`/pokemon/${props.id}`}>
+    <Link to={`/pokemon/battle/${props.id}/${opponent}`}>
   <div className="pokeCard">
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="bulbasaur"/>
     <ul>

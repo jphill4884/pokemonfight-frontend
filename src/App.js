@@ -19,7 +19,7 @@ function App() {
         <Route path="/:pokeId" />
         <Route path="/battle/:homeId/:awayId" element={<Battle />}/>
         <Route path="/ranking" element={<RankingTable/>}/>
-      
+        <Route path="/" element={<Home />}/>
       </Routes>
     </div>
   );
